@@ -11,38 +11,7 @@
   </div>
 </div>
 <div class="main_view">
-  <div class="post">
-    <div class="upper-post">
-      <div class="name">
-        <p>
-          Takahiro
-        </p>
-      </div>
-      <div class="time">
-        <p>2020/09/09(wed) 00:00:00</p>
-      </div>
-    </div>
-    <div class="lower-post">
-      <div class="message">
-        <p>Hello!</p>
-      </div>
-    </div>
-  </div>
-  <div class="post">
-    <div class="upper-post">
-      <div class="name">
-        <p>Masuo</p>
-      </div>
-      <div class="time">
-        <p>2020/09/09(wed) 00:00:00</p>
-      </div>
-    </div>
-    <div class="lower-post">
-      <div class="message">
-        <p>welcome!</p>
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], html: {class: "main_footer"}, local: true do |f| %>
   <div class="form">
